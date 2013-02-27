@@ -22,6 +22,14 @@ app.get('/script.js', function(req, res) {
   res.sendfile(__dirname + '/script.js');
 });
 
+app.get('/hub.js', function(req, res) {
+  res.sendfile(__dirname + '/hub.js');
+});
+
+app.get('/client.js', function(req, res) {
+  res.sendfile(__dirname + '/client.js');
+});
+
 app.get('/webrtc.io.js', function(req, res) {
   res.sendfile(__dirname + '/webrtc.io.js');
 });
@@ -36,7 +44,7 @@ webRTC.rtc.on('send answer', function(rtc) {
 });
 
 webRTC.rtc.on('disconnect', function(rtc) {
-  //Client disconnect 
+  //Client disconnect
 });
 
 webRTC.rtc.on('chat_msg', function(data, socket) {
